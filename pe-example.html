@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        html {
+            padding: 0;
+            margin: 0;
+			background-color: #444444;
+			background-image: url("assets/bg.jpg");
+			background-size: cover;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+		.wrapper {
+			margin: 0;
+            padding: 1em;
+			width: 100%;
+		}
+    </style>
+    <script type="text/javascript" src="js/pe.js"></script>
+    <script type="text/javascript" src="js/peExample.js"></script>
+	<script type="text/javascript">
+		let myApp = undefined;
+		window.onload = function (e) {
+			myApp = new PEApp(document.getElementById("con"));
+			window.onload = null;
+		};
+	</script>
+</head>
+<body>
+	<div class="wrapper">
+		<div id="con"></div>
+	</div>
+</body>
+</html>

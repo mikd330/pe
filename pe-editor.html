@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PE: Polygon Editor</title>
+    <style type="text/css">
+        html {
+            padding: 0;
+            margin: 0;
+			color: black;
+			background-color: #eeeeee;
+			background-size: cover;
+        }
+		* {
+			box-sizing: border-box;
+		}
+        body {
+            margin: 4px;
+            padding: 8px;
+        }
+		canvas {
+			border: solid 1px #cccccc;
+		}
+		input,
+		label {
+			margin-left: 8px;
+		}
+		.row {
+			padding: 4px;
+		}
+		.box-l,
+		.box-r {
+			display: inline-block;
+			vertical-align: top;
+		}
+		.box-r {
+			max-width: 300px;
+		}
+    </style>
+    <script type="text/javascript" src="js/pe.js"></script>
+    <script type="text/javascript" src="js/editor-poly.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<header>
+	</header>
+	<main>
+	<div class="box-l">
+		<canvas id="cvs" width="600" height="600"></canvas>
+	</div>
+	<div class="box-r">
+		<div class="row">
+			<label>Image:</label>
+			<input id="i-file" type="file"></input>
+		</div>
+		<div class="row">
+			<input id="i-mass" type="text" value="20"></input>
+			<label>Mass</label>
+		</div>
+		<div class="row">
+			<input id="i-fric" type="text" value="0.2"></input>
+			<label>Friction</label>
+		</div>
+		<div class="row">
+			<input id="i-rest" type="text" value="0.5"></input>
+			<label>Restitution</label>
+		</div>
+		<div class="row">
+			<button id="b-clear" type="button">Clear</button>
+			<button id="b-dele" type="button">Del. Point</button>
+			<button id="b-save" type="button">Save</button>
+		</div>
+		<div class="row">
+			<input id="i-zoom" type="text" value="100"></input>
+			<label>% Zoom</label>
+		</div>
+		<div class="row">
+			<p>Drag center sign and double click canvas to create point. You can drag each point sign to create a polygon</p>
+		</div>
+	</div>
+	</main>
+	<footer>
+	</footer>
+</div>
+</body>
+</html>
